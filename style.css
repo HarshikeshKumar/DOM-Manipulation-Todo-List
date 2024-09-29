@@ -1,6 +1,11 @@
 :root{
     --body-background: #f4f4f9;
     --btn-primary: #5cbaff;
+    --btn-secondary: #f8e068;
+    --btn-active: #4a90e2;
+    --btn-edit: #ffd700;
+    --btn-complete: #32bc32;
+    --btn-delete: #ff6347;
     /* If you want to color identify you can use 'css var' */
 }
 * {
@@ -55,4 +60,38 @@ li:hover{
 
 li:last-child {
     border-bottom: none;
+}
+
+.filterBtn, .editBtn, .deleteBtn, .completedBtn{
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: var(--btn-secondary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+.editBtn{
+    background-color: var(--btn-edit);
+}
+.deleteBtn{
+    background-color: var(--btn-delete);
+}
+.completedBtn{
+    background-color: var(--btn-complete);
+}
+.filterBtn:hover{
+    background-color: var(--btn-active);
+}
+
+.todoItem{
+    letter-spacing: 1px;
+}
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
 }
